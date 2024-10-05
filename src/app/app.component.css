@@ -1,0 +1,14 @@
+table * {
+  border-spacing: 0;
+  width: fit-content;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  & > * {
+    border: 1px dashed #dedede;
+    flex-grow: 1;
+  }
+}

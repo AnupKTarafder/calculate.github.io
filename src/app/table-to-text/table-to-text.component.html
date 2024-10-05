@@ -1,0 +1,30 @@
+<div style="height: 100vh; overflow-y: hidden" [formGroup]="form">
+  <div style="overflow-y: scroll; height: calc(100vh - 80px)">
+    <table style="width: 100%">
+      @for (item of items.controls; let i = $index; track i) {
+        <tr>
+          <td style="width: 50%">
+            <mat-form-field appearance="fill" style="width: 100%">
+              <input placeholder="পণ্য" matInput type="text" [formControl]="getFormControl(item, 'item')">
+            </mat-form-field>
+          </td>
+          <td style="width: 50%">
+          <mat-form-field appearance="fill" style="width: 100%">
+              <input placeholder="দাম" matInput type="text" [formControl]="getFormControl(item, 'price')">
+            </mat-form-field>
+          </td>
+        </tr>
+      }
+    </table>
+  </div>
+  <div style="display: flex; flex-direction: row; height : 80px;place-items: center; place-content: center">
+    <button (click)="submitForm()" mat-flat-button>
+      <mat-icon>content_copy</mat-icon>
+      <span>টেক্সট কপি করুন</span>
+    </button>
+    <mat-checkbox formControlName="addTotalLines">
+      <label style="color: black;margin-left: -4px">""মোট"" লাইন যোগ কর</label>
+    </mat-checkbox>
+
+  </div>
+</div>

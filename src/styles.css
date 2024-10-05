@@ -1,1 +1,24 @@
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+  --font-family: Kalpurush, serif, sans-serif;
+  height: 100%;
+  font-family: var(--font-family);
+  --mdc-filled-button-label-text-font: var(--font-family);
+  --mat-checkbox-label-text-font: var(--font-family)
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-mdc-form-field-bottom-align::before {
+  height: 0 !important;
+}
+
+
+.mat-mdc-form-field-flex, .mat-mdc-form-field-flex .mat-mdc-form-field-infix {
+  height: 100%;
+}
